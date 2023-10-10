@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Formulários</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Formulários (Campo Obrigatório, Foco, Desabilitar)">
+</head>
+
+<body>
+
+    <form action="cadastro.php" method="POST">
+
+        <fieldset>
+            <legend> Informações Pessoais </legend>
+            Nome: <br>
+            <input type="text" name="nome" required autofocus maxlength="5"><br>
+            Senha: <br>
+            <input type="password" name="senha" disabled><br>
+            Email: <br>
+            <input type="email" name="email"><br>
+
+            <br>
+            <input type="submit" name="btn-enviar" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+
+</html>
