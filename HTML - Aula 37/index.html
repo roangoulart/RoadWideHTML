@@ -2,27 +2,29 @@
 <html lang="pt-br">
 
 <head>
-    <title>Menu / Menuitem</title>
+    <title>Datalist</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Menu / Menuitem">
+    <meta name="description" content="Datalist">
 
-    <style>
-        elemento {width: 300px; height: 300px; background-color: #ccc;}
-    </style>
 </head>
 
 <body>
 
-    <div class="elemento" contextmenu="meu-menu">
-    </div>
+    <h1>Elemento Datalist</h1>
 
-    <menu type="context" id="meu-menu">
-        <menuitem>Atualizar</menuitem>
+    <form action="seletor-navegador.php" method="post">
+        <label for="navegador">Escolha o seu navegador na lista:</label>
+        <input list="navegadores" name="navegador" id="navegador">
+        <datalist id="navegadores">
+            <option value="Edge">
+                <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                    <option value="Safari">
+        </datalist>
+        <input type="submit">
+    </form>
 
-        <menu label="Siga-nos">
-            <menuitem icon="./icons/facebookLogo.png">Facebook</menuitem>
-            <menuitem icon="./icons/googleLogo.png">Google</menuitem>
-        </menu>
-    </menu>
+    <p><strong>Nota: </strong> A tag datalist não é suportada no navegador Safari 12.0 (e seus antecessores)</p>
 </body>
 </html>
